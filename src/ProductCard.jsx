@@ -1,9 +1,8 @@
 import React from "react";
 
 
-const ProductCard = () => ({product, setCount, count}) {
+export function ProductCard({product, setCount, count}){
     
-  
 
     return(
       <div className="product-card">
