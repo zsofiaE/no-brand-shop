@@ -1,13 +1,15 @@
 import React from "react";
-import { useState } from "react";
 
-function ProductCart ({product, setCount, count}){
+
+const ProductCard = () => ({product, setCount, count}) {
     
-    const [cart, setCart] = useState(0);
+  
 
     return(
       <div className="product-card">
-      <img src={product.imageSrc} alt={product.desc}/>
+      <img 
+        src={product.imageSrc} 
+        alt={product.desc}/>
       <div className="product-info">
         <h3>{product.name}</h3>
         <h3>{product.price}</h3>
@@ -17,8 +19,7 @@ function ProductCart ({product, setCount, count}){
         add to cart
       </button>
     </div>
-    )
+    );
     }
     
-
-    export default ProductCart;
+    export default ProductCard;
