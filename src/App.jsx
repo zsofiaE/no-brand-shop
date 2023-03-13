@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import  ProductCard from './ProductCard'
+import Cart from './Cart'
 
 const product = {
   id: 1,
@@ -100,9 +101,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>the illustratory</h1>
-      <h3 className="cart">cart: {count}</h3>
-      <div className="products-container">
+      <h1 className="logo">the illustratory</h1>
+      <Cart count={count} />
+      <div className="products-list">
         {products.map((product) =>  
         <ProductCard 
           product={product} 
