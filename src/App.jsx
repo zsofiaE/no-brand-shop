@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import  ProductCard from './ProductCard'
-import Cart from './Cart'
+import  ProductCard from './components/ProductCard'
+import Cart from './components/Cart'
 
 const product = {
   id: 1,
