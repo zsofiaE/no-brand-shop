@@ -10,8 +10,8 @@ export function ProductCard({product, setCount, count}){
         src={product.imageSrc} 
         alt={product.desc}/>
       <div className="product-info">
-        <h3>{product.name}</h3>
-        <h3>{product.price}</h3>
+        <h4>{product.name}</h4>
+        <h4>{product.price}</h4>
       </div>
       <p>{product.desc}</p>
       <button onClick={() => setCount(count + 1)}>
