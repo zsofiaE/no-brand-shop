@@ -1,6 +1,12 @@
 const Cart = ({count}) => {
     return (
-    <h3 className="cart">cart: {count}</h3>
+        <div className="cart-container">
+            <h3 className="cart"><span class="material-symbols-outlined">
+shopping_cart
+</span>
+                <div className="cart-items">{count}</div>
+            </h3>
+         </div>
     )
 }
 
