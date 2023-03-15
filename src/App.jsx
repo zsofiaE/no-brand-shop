@@ -16,7 +16,9 @@ import ProductList from './components/ProductList'
 import RootLayout from './layouts/RootLayout'
 import Contact from './pages/Contact'
 
-function App() {
+const App = () => {
+
+  const [count, setCount] = useState(0);
   const [products, setProducts] = useState([
     {
       id: 0,
@@ -68,51 +70,6 @@ function App() {
     },
   ])
 
-  const [count, setCount] = useState(0);
-  const { id } = useParams()
-
-  console.log(id)
-
-//   const router = createBrowserRouter([{
-//     path:'/',
-//     element: (
-//       <div className="App">
-//         <h1 className="logo">the illustratory</h1>
-//         <Cart count={count} />
-//         <Link to="about">About Us</Link>
-//         <div className="products-list">
-//           {products.map((product) =>  
-//           <ProductCard 
-//             product={product} 
-//             key={product.id} 
-//             setCount={setCount} 
-//             count={count}
-//           /> 
-//           )}
-//         </div>
-//       </div>
-//       )
-//       },
-//       {
-//         path: 'about',
-//         element: (<div>
-//           <h1>About page</h1>
-//           <Link to="/">back to home page</Link>
-//           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum asperiores odio ut sapiente consectetur! Nobis accusantium fugiat fuga aspernatur debitis eaque similique natus, enim obcaecati iusto aut. Quas, ea reprehenderit.</p>
-//           </div>)
-//       }, 
-//       {
-//         path: 'product/:id',
-//         element: (
-//           <ProductPage 
-//             imgUrl={products[id].imageSrc}
-//             name={products[id].name}
-//             price={products[id].price}
-//             desc={products[id].desc} />)
-//       }
-
-// ])
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout count={count}/>} >
@@ -129,4 +86,4 @@ const router = createBrowserRouter(
   )
 }
 
-export default App
+export default App;

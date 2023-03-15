@@ -7,7 +7,7 @@ const ProductCard = ({product, setCount, count}) => {
     return(
     
       <div className="product-card">
-        <Link to={"product"} >
+        <Link to={"product/"+product.id} >
           <img className="card-img"
             src={product.imageSrc} 
             alt={product.desc}/>
