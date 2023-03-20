@@ -1,18 +1,17 @@
 import Cart from "../components/Cart";
-import { Link, Outlet } from  'react-router-dom';
+import { Link, NavLink, Outlet } from  'react-router-dom';
 
-const RootLayout = ({count}) => {
+const RootLayout = ({totalItems}) => {
     return(
-    <div className="header">
+    <div className="app">
         <nav>
-            <h1 className="logo">the illustratory</h1>
-            
-            <navbar>
-                <Link to="/">Home </Link>
-                <Link to="about"> About Us</Link>
-                <Link to="product/1"> go to product 1</Link>
-            </navbar>
-            <Cart count={count} />
+            <Link to="/"><h1 className="logo">illustratory</h1></Link>
+            <div className="navbar">
+                <NavLink to="/">Home </NavLink>
+                <NavLink to="about"> About Us</NavLink>
+                <NavLink to="cart">Cart<Cart totalItems={totalItems}/></NavLink>
+            </div>
+            {/* <Cart count={count} /> */}
         </nav>
         <Outlet />
     </div>
