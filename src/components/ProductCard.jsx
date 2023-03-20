@@ -15,9 +15,9 @@ const ProductCard = ({product, addItem}) => {
             <h4>{product.name}</h4>
             <h4>{product.price}</h4>
           </div>
-          <p>{product.desc}</p>
+          {/* <p>{product.desc}</p> */}
         </Link>
-          <button onClick={() => addItem(product)}>
+          <button className="product-card-btn" onClick={() => addItem(product)}>
             add to cart
           </button>
         </div>

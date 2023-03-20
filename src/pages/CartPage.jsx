@@ -18,7 +18,7 @@ const Cart = ({cartItems, removeItem}) => {
             src={window.location.origin + cartItem.imageSrc} 
             alt={cartItem.name}
             />
-          <div className="product-info">
+          <div className="product-info-cart">
             <h4>{cartItem.name}</h4>
             {/* <h4>cartItem.quantity</h4> */}
             <h4>{cartItem.price}</h4>
