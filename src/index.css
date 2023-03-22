@@ -15,9 +15,9 @@
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  /* padding: 2rem; */
+  max-width: 100%;
+  margin: 0;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -25,7 +25,6 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
-  padding: 10px;
 }
 a:hover {
   color: #535bf2;
@@ -66,7 +65,7 @@ button:focus-visible {
 
 .logo {
   /* height: 6em; */
-  padding: 1em;
+  padding: 0.5em;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -78,36 +77,42 @@ button:focus-visible {
   filter: drop-shadow(0 0 2em #61dafbaa);
 } 
 
-/* .app{
-  display: flex;
+.app{
+  /* width: inherit; */
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;*/
 
-} */
+} 
 
-/* nav{
+nav{
+  padding: 0.5em;
   display: flex;
-  flex-direction: column;
-
-} */
-
-navbar{
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
+.navbar{
+ padding: 0 42px
+}
+
+.navbar > a{
+  padding: 10px;
+}
+.active{
+  background-color:rgb(75, 75, 90);
+  border-radius: 40px;
+}
+
+.product-card-btn{
+  margin: 5px 0 15px 0;
+}
 
 .cart-container{
   position: absolute;
-  top: 170px;
+  top: 55px;
   right: 50px;
-
-  
-  
-
   /* justify-content: flex-end; */
-
-
 }
 
 .cart{
@@ -138,11 +143,29 @@ navbar{
   line-height: 16px;*/
 }
 
+.cart-item{
+  display: flex;
+  padding: 12px;
+  margin: 12px;
+  border: solid 0.3px  #646cff;
+  border-radius: 15px;
+}
+
+.product-info-cart{
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 40px;
+ 
+}
+
+.cart-img{
+  max-width: 200px;
+}
+
 .products-list{
   display: flex;
   /* justify-content: center; */
   flex-wrap: wrap;
-
 }
 
 .product-card {
@@ -158,7 +181,6 @@ navbar{
  box-shadow: 0px 0px 8px 4px rgba(210, 210, 210, 0.6);
  -webkit-box-shadow: 0px -1px 18px 0px rgb(210, 210, 210, 0.6);
  -moz-box-shadow: 0px -1px 18px 0px rgb(210, 210, 210, 0.6);
-
   /* filter: drop-shadow(0 0 0.3em #878793aa); */
 }
 
@@ -178,12 +200,30 @@ navbar{
   display: flex;
 }
 
+.product-page > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:space-evenly;
+}
+
 .product-page > img {
 max-width: 320px;
 }
 
 .product-elements{
   padding: 2rem;
+  text-align: left;
+}
+
+.profile-image{
+  width: 320px;
+  margin: 20px;
+}
+
+.profile-data{
+  display: flex;
+  justify-content: space-around;
   text-align: left;
 }
 

@@ -1,10 +1,10 @@
-const Cart = ({count}) => {
+const Cart = ({totalItems}) => {
     return (
         <div className="cart-container">
-            <h3 className="cart"><span class="material-symbols-outlined">
+            <h3 className="cart"><span className="material-symbols-outlined">
 shopping_cart
 </span>
-                <div className="cart-items">{count}</div>
+                <div className="cart-items">{totalItems}</div>
             </h3>
          </div>
     )
