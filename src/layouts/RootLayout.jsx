@@ -11,7 +11,6 @@ const RootLayout = ({totalItems}) => {
                 <NavLink to="about"> About Us</NavLink>
                 <NavLink to="cart">Cart<Cart totalItems={totalItems}/></NavLink>
             </div>
-            {/* <Cart count={count} /> */}
         </nav>
         <Outlet />
     </div>

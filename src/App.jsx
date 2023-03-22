@@ -20,6 +20,7 @@ import Contact from './pages/Contact'
 import ProductPage from './pages/ProductPage'
 import ProfilePage from './pages/ProfilePage'
 import CartPage from './pages/CartPage'
+import Error from './pages/ErrorPage'
 
 const App = () => {
 
@@ -97,6 +98,7 @@ const router = createBrowserRouter(
         <Route path='product/:id' element={<ProductPage products={products} addItem={addItem} />}/>
         <Route path="contact" element={<Contact />} />
         <Route path="profile/:userId" element={<ProfilePage />} />
+        <Route path="*" element={<Error />} />
     </Route>
   )
 )
